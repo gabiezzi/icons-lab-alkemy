@@ -9,7 +9,7 @@ import javax.persistence.*;
 @Table(name = "contiene")
 @Getter
 @Setter
-public class ContinenteEntity {
+public class ContinentEntity {
 
     @Id
     @GeneratedValue(strategy = GenerationType.SEQUENCE)

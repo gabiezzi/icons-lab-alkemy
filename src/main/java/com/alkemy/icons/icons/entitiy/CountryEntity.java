@@ -11,7 +11,7 @@ import java.util.Set;
 @Entity
 @Getter
 @Setter
-public class PaisEntity {
+public class CountryEntity {
 
 
     @Id
@@ -29,7 +29,7 @@ public class PaisEntity {
 
     @ManyToOne(fetch = FetchType.EAGER , cascade = CascadeType.ALL)
     @JoinColumn(name = "continente_id" , insertable = false , updatable = false)
-    private ContinenteEntity continente;
+    private ContinentEntity continente;
 
     @Column(name = "continente_id" , nullable = false)
     private Long continenteId;
@@ -43,7 +43,7 @@ public class PaisEntity {
             name = "icon_pais",
             joinColumns = @JoinColumn(name= "pais_id"),
             inverseJoinColumns = @JoinColumn(name = "icon_id"))
-    private Set<IconoEntity> icons = new HashSet<>();
+    private Set<IconEntity> icons = new HashSet<>();
 
 
 
@@ -53,7 +53,7 @@ public class PaisEntity {
             return false;
         if (getClass() != object.getClass())
             return false;
-        final PaisEntity other = (PaisEntity) object;
+        final CountryEntity other = (CountryEntity) object;
         return other.id == this.id;
     }
 }

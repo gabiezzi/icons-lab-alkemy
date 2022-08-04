@@ -11,7 +11,7 @@ import java.util.List;
 @Entity
 @Getter
 @Setter
-public class IconoEntity {
+public class IconEntity {
 
 
     @Id
@@ -32,7 +32,7 @@ public class IconoEntity {
     private String historia;
 
     @ManyToMany(mappedBy = "icons" , cascade = CascadeType.ALL)
-    private List <PaisEntity> paises = new ArrayList<>() ;
+    private List <CountryEntity> paises = new ArrayList<>() ;
 
 
 
